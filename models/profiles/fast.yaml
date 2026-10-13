@@ -1,0 +1,8 @@
+name: llama3.2:3b
+min_ram_gb: 8
+vision: false
+context_tokens: 4096
+quantization: q4_k_m
+device_floor: "M1 MacBook Air 8GB or Intel i5 8GB RAM"
+latency_per_doc_seconds: 1.2
+cost_per_doc: "$0.00"

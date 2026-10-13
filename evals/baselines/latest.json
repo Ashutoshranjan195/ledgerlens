@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-13T12:00:00Z",
+  "model_profile": "balanced",
+  "prompt_version": "v1",
+  "samples_evaluated": 39,
+  "metrics": {
+    "vendor_accuracy": 0.949,
+    "date_accuracy": 1.0,
+    "total_accuracy": 0.974,
+    "tax_accuracy": 1.0,
+    "category_accuracy": 0.923,
+    "overall_exact_match": 0.872
+  }
+}

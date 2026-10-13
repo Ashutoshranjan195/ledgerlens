@@ -1,0 +1,8 @@
+name: qwen2.5:32b-vl
+min_ram_gb: 32
+vision: true
+context_tokens: 16384
+quantization: q4_k_m
+device_floor: "Apple Silicon M2/M3 Max 32GB+ or Nvidia RTX 3090/4090 24GB VRAM"
+latency_per_doc_seconds: 6.5
+cost_per_doc: "$0.00"

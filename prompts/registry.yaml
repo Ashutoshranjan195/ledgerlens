@@ -1,0 +1,12 @@
+extract_fields:
+  current: v1  # Set to v1: stable baseline passing golden set; candidate v2 is evaluated via eval gate
+  versions:
+    v1: extract_fields.v1.md
+    v2: extract_fields.v2.md
+  eval_gate:
+    metric: exact_match
+    min_delta: 0.01     # new version must beat current by ≥1pp
+categorize:
+  current: v1
+  versions:
+    v1: categorize.v1.md

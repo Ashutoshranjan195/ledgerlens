@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ledgerlens"
+version = "0.1.0"
+description = "Local-first, offline, zero-marginal-cost receipt & expense ledger for solopreneurs"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "LedgerLens Contributors"}
+]
+dependencies = [
+    "pydantic>=2.5.0",
+    "pyyaml>=6.0",
+    "streamlit>=1.35.0",
+    "pillow>=10.0.0",
+    "pypdf>=4.0.0",
+    "cryptography>=42.0.0",
+    "requests>=2.31.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=5.0.0",
+]
+
+[project.scripts]
+ledgerlens = "app.cli:main"
+app = "app.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+

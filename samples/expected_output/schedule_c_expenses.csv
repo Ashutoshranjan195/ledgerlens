@@ -1,0 +1,6 @@
+doc_date,vendor,category,total_amount,tax_amount,currency,status,confidence,filename
+2026-03-15,B&H PHOTO VIDEO,Supplies & Equipment,70.75,5.77,USD,processed,0.95,bh_photo_receipt.txt
+2026-04-02,STARBUCKS,Meals (50%),10.68,0.98,USD,processed,0.95,starbucks_meeting.txt
+2026-04-10,SHELL OIL,Vehicle,55.68,0.00,USD,processed,0.95,shell_gas.txt
+2026-03-10,APERTURE STUDIOS RENTALS LLC,Supplies & Equipment,1193.50,93.50,USD,processed,0.95,aperture_studio_rentals.txt
+2026-04-12,SARAH CHEN - PROFESSIONAL RETOUCHING,Contract Labor,1000.00,0.00,USD,processed,0.95,sarah_chen_retouching.txt

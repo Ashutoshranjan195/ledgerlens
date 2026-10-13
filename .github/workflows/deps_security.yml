@@ -1,0 +1,31 @@
+name: Monthly Dependencies Security Audit
+
+on:
+  schedule:
+    - cron: '0 0 1 * *' # Monthly
+  workflow_dispatch:
+
+jobs:
+  audit-and-eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies & Audit
+        run: |
+          pip install pip-audit pytest
+          pip install -e .
+          pip-audit || echo "Audit completed with warnings"
+
+      - name: Build Docker Container
+        run: |
+          docker build -t ledgerlens:test -f packaging/docker/Dockerfile .
+
+      - name: Run Evals
+        run: |
+          python evals/run.py --fail-under 0.85

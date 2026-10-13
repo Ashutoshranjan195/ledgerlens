@@ -1,0 +1,16 @@
+profiles:
+  fast:
+    name: llama3.2:3b
+    min_ram_gb: 8
+    vision: false
+  balanced:
+    name: qwen2.5:7b-vl
+    min_ram_gb: 16
+    vision: true
+  best:
+    name: qwen2.5:32b-vl
+    min_ram_gb: 32
+    vision: true
+default_profile: balanced
+embeddings: nomic-embed-text
+allow_cloud_fallback: false

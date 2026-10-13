@@ -1,0 +1,62 @@
+[
+  {
+    "filename": "bh_photo_receipt.txt",
+    "vendor": "B&H PHOTO VIDEO",
+    "doc_date": "2026-03-15",
+    "total_amount": 70.75,
+    "tax_amount": 5.77,
+    "currency": "USD",
+    "category": "Supplies & Equipment",
+    "confidence": 0.95,
+    "needs_review": 0,
+    "status": "processed"
+  },
+  {
+    "filename": "starbucks_meeting.txt",
+    "vendor": "STARBUCKS",
+    "doc_date": "2026-04-02",
+    "total_amount": 10.68,
+    "tax_amount": 0.98,
+    "currency": "USD",
+    "category": "Meals (50%)",
+    "confidence": 0.95,
+    "needs_review": 0,
+    "status": "processed"
+  },
+  {
+    "filename": "shell_gas.txt",
+    "vendor": "SHELL OIL",
+    "doc_date": "2026-04-10",
+    "total_amount": 55.68,
+    "tax_amount": 0.00,
+    "currency": "USD",
+    "category": "Vehicle",
+    "confidence": 0.95,
+    "needs_review": 0,
+    "status": "processed"
+  },
+  {
+    "filename": "aperture_studio_rentals.txt",
+    "vendor": "APERTURE STUDIOS RENTALS LLC",
+    "doc_date": "2026-03-10",
+    "total_amount": 1193.50,
+    "tax_amount": 93.50,
+    "currency": "USD",
+    "category": "Supplies & Equipment",
+    "confidence": 0.95,
+    "needs_review": 0,
+    "status": "processed"
+  },
+  {
+    "filename": "sarah_chen_retouching.txt",
+    "vendor": "SARAH CHEN - PROFESSIONAL RETOUCHING",
+    "doc_date": "2026-04-12",
+    "total_amount": 1000.00,
+    "tax_amount": 0.00,
+    "currency": "USD",
+    "category": "Contract Labor",
+    "confidence": 0.95,
+    "needs_review": 0,
+    "status": "processed"
+  }
+]

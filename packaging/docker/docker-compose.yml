@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ledgerlens-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_models:/root/.ollama
+    restart: unless-stopped
+
+  ledgerlens:
+    build:
+      context: ../..
+      dockerfile: packaging/docker/Dockerfile
+    container_name: ledgerlens-app
+    depends_on:
+      - ollama
+    ports:
+      - "8501:8501"
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+      - LEDGERLENS_PROFILE=balanced
+      - LEDGERLENS_DATA_DIR=/data
+    volumes:
+      - ledgerlens_data:/data
+    restart: unless-stopped
+
+volumes:
+  ollama_models:
+  ledgerlens_data:

@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "LedgerLensReleaseManifest",
+  "type": "object",
+  "required": ["app", "models", "prompts", "schema_version", "published_at"],
+  "properties": {
+    "app": {
+      "type": "object",
+      "required": ["version", "url", "sha256", "signature"],
+      "properties": {
+        "version": {"type": "string"},
+        "url": {"type": "string", "format": "uri"},
+        "sha256": {"type": "string"},
+        "signature": {"type": "string"}
+      }
+    },
+    "models": {
+      "type": "object",
+      "properties": {
+        "fast": {
+          "type": "object",
+          "required": ["tag", "digest"],
+          "properties": {
+            "tag": {"type": "string"},
+            "digest": {"type": "string"}
+          }
+        },
+        "balanced": {
+          "type": "object",
+          "required": ["tag", "digest"],
+          "properties": {
+            "tag": {"type": "string"},
+            "digest": {"type": "string"}
+          }
+        },
+        "best": {
+          "type": "object",
+          "required": ["tag", "digest"],
+          "properties": {
+            "tag": {"type": "string"},
+            "digest": {"type": "string"}
+          }
+        }
+      }
+    },
+    "prompts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["version", "sha256"],
+        "properties": {
+          "version": {"type": "string"},
+          "sha256": {"type": "string"}
+        }
+      }
+    },
+    "schema_version": {"type": "integer"},
+    "published_at": {"type": "string", "format": "date-time"}
+  }
+}

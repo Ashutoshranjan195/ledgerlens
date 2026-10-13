@@ -1,0 +1,14 @@
+app:
+  auto_backup_on_launch: true
+  confidence_threshold: 0.85
+  currency_default: USD
+  export_format: csv
+  free_tier_monthly_limit: 30
+  name: LedgerLens
+  profile: best
+  tax_year_default: 2026
+  version: 0.1.0
+privacy:
+  allow_cloud_fallback: false
+  strict_offline: true
+  telemetry_disabled: true
